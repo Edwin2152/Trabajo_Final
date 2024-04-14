@@ -2,6 +2,9 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html
 
+#importamos enlaces de otras carpetas
+from fronted.derecha import layout
+
 
 layout=dbc.Container([
     dbc.Row([
