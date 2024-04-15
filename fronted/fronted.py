@@ -14,10 +14,10 @@ layout = dbc.Container([
         dbc.Col(html.H1("Cotizador de vehículos"), md=10,
                 style={'background-color': '#155F82'}),
         html.Br(), html.Br(), html.Br(), html.Br(),
-        dbc.Col(izquierda, md=6, style={'background-color': '#DCEAF7'}),
+        dbc.Col(izquierda, md=6, style={'background-color': '#DCEAF7', 'margin-top':'15px'}),
         dbc.Col(derecha, md=6, style={'background-color': 'white'}),
         html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(
         ), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(), html.Br(),
-        dbc.Col(inferior, md=12, style={'background-color': '#155F82'}),
+        dbc.Col(inferior, md=12, style={'background-color': '#155F82','margin-top':'15px'}),
     ])
 ])
