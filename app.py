@@ -12,12 +12,12 @@ from fronted.fronted import layout
 
 app.layout=layout
 
-#@callback(
-    #Output(),
-    #Input("Marca_consultado", "value"),
-    #Input("Referencia_consultado", "value"),
-    #Input("Modelo_consultado", "value")
-#)
+@callback(
+    Output('resultado',"value"),
+    Input("Marca_consultado", "value"),
+    Input("Referencia_consultado", "value"),
+    Input("Modelo_consultado", "value")
+)
 
 
 def consulta(Marca_consultado,Referencia_consultado,Modelo_consultado):
