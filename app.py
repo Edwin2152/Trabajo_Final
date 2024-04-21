@@ -19,22 +19,20 @@ app.layout=layout
     #Input("Modelo_consultado", "value")
 #)
 
-#def consulta(auto_consultado,Referencia_consultado,Modelo_consultado):
+
+def consulta(Marca_consultado,Referencia_consultado,Modelo_consultado):
     # Consulta concatenada
-    #filtro = {
-       # "Marca": auto_consultado,
-        #"Referencia": Referencia_consultado,
-        #"Modelo": Modelo_consultado
-   # }
+    filtro = {
+        "Marca":Marca_consultado,
+        "Referencia": Referencia_consultado,
+        "Modelo": Modelo_consultado
+    }
 
     # Realizar la consulta a la base de datos
-    #resultados = db.find(filtro)
+    resultado = db.find_One(filtro)
 
-    # Convertir los resultados a una lista
-    #print(dataframe(resultados))
-
-   #resultado = dataframe["Precio"]
-    #return
+    if resultado:print( "El precio es:",resultado['Precio'])
+    else : print ("No se encontraron resultados para los filtros especificados.")
 
 if __name__=='__main__':
     app.run_server(debug=True)
