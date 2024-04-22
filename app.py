@@ -13,7 +13,7 @@ from fronted.fronted import layout
 app.layout=layout
 
 @callback(
-    Output('resultado',"value"),
+    Output('resultado',"children"),
     Input("Marca_consultado", "value"),
     Input("Referencia_consultado", "value"),
     Input("Modelo_consultado", "value")
@@ -27,11 +27,10 @@ def consulta(Marca_consultado,Referencia_consultado,Modelo_consultado):
         "Referencia": Referencia_consultado,
         "Modelo": Modelo_consultado
     }
-
     # Realizar la consulta a la base de datos
-    resultado = db.find_One(filtro)
-
-    if resultado:print( "El precio es:",resultado['Precio'])
+    base = db['base']
+    resultado = base.find_one(filtro)
+    if resultado:print( "El precio es:",resultado['precio'])
     else : print ("No se encontraron resultados para los filtros especificados.")
 
 
