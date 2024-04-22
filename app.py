@@ -35,6 +35,5 @@ def consulta(Marca_consultado,Referencia_consultado,Modelo_consultado):
     else : print ("No se encontraron resultados para los filtros especificados.")
 
 
-
 if __name__=='__main__':
-    app.run_server(debug=True).,nn
+    app.run_server(debug=True)
