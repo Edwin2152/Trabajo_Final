@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 from dash import html,dcc
 
 
+
 derecha = dbc.Container([
     dbc.Row([
         dbc.Col([html.H2("Detalle y precio"), html.Hr(), html.Hr(), html.Hr(), html.Hr(), html.Hr(
