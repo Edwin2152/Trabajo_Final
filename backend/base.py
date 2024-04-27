@@ -9,3 +9,19 @@ marcas = collection.distinct('marca')
 referencias = collection.distinct('referencia3')
 modelos= collection.distinct('anio')
 clases= collection.distinct('clase')
+
+filtro = {
+    'marca': {'$in': marcas},
+    'referencia3': {'$in': referencias},
+    'anio': {'$in': modelos},
+    'clase': {'$in': clases},
+    'precio': {'$exists': True}
+}
+
+
+resultados = collection.find(filtro,)
+
+precios = [resultado['precio'] for resultado in resultados]
+
+for resultado in resultados:
+    print(resultado)
