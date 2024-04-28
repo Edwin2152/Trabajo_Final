@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 from dash import Dash, html,dcc, callback, Input, Output
 from pymongo.mongo_client import MongoClient
 
-from backend.base import db
+from backend.base import db, consultaResultado
 
 app= dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
@@ -13,7 +13,7 @@ app.layout=layout
 
 
 @callback(
-    Output('resultado',"children"),
+    Output('ResultadoObtenido',"children"),
     Input("Clase_consultada", "value"),
     Input("Marca_consultado", "value"),
     Input("Referencia_consultado", "value"),
@@ -21,20 +21,10 @@ app.layout=layout
 )
 
 
-def consulta(Marca_consultado,Referencia_consultado,Modelo_consultado,Clase_consultada):
-    # Consulta concatenada
-    filtro = {
-        "Categoria": Clase_consultada,
-        "Marca":Marca_consultado,
-        "Referencia": Referencia_consultado,
-        "Modelo": Modelo_consultado
-    }
-    # Realizar la consulta a la base de datos
-    base = db['base']
-    resultado = base.find_one(filtro)
-    if resultado:print( "El precio es:",resultado['precio'])
-    else : print ("No se encontraron resultados para los filtros especificados.")
-
+def consulta(Clase_consultada,Marca_consultado,Referencia_consultado,Modelo_consultado): 
+    print(Clase_consultada,Marca_consultado,Referencia_consultado,Modelo_consultado)
+    return consultaResultado(Clase_consultada,Marca_consultado,Referencia_consultado,Modelo_consultado)
+    
 
 if __name__=='__main__':
     app.run_server(debug=True)
