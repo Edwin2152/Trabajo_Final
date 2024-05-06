@@ -1,4 +1,4 @@
-pymongo.mongo_client
+pymongo.mongo_client == 4.6.3
 dash
 ash_bootstrap_components
 dash.dependencies
