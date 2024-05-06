@@ -10,8 +10,8 @@ from .Estructuras.inferior import inferior
 
 layout = dbc.Container([
     dbc.Row([
-        dbc.Col(html.H2("Logo"), md=2, style={'background-color': '#E97132'}),
-        dbc.Col(html.H1("Cotizador de vehículos"), md=10,
+        dbc.Col(html.H2("Logo", style={'text-align': 'center'}), md=2, style={'background-color': '#E97132'}),
+        dbc.Col(html.H1("Cotizador de vehículos", style={'text-align': 'center'}), md=10,
                 style={'background-color': '#155F82'}),
         html.Br(), html.Br(), html.Br(), html.Br(),
         dbc.Col(izquierda, md=6, style={'background-color': '#DCEAF7', 'margin-top':'15px'}),
