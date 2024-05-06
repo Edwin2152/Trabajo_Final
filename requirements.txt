@@ -4,3 +4,4 @@ dash-bootstrap-components==1.6.0
 callback==0.0.1
 dcc==0.8.0
 dnspython==2.6.1
+gunicorn
