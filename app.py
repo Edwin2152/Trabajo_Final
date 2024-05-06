@@ -6,7 +6,7 @@ from pymongo.mongo_client import MongoClient
 from backend.base import db, consultaResultado
 
 app= dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-
+server=app.server
 from fronted.fronted import layout
 
 app.layout=layout
