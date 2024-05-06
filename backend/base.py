@@ -1,6 +1,10 @@
 
 # SE REALIZA CONEXIÓN GENERAL A LA BASE DE DATOS
 from pymongo.mongo_client import MongoClient
+from dash import html
+import dash_bootstrap_components as dbc
+
+
 import locale
 uri = "mongodb+srv://mejiatatiana823:1234@cluster0.kwawjut.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 # Create a new client and connect to the server
@@ -33,7 +37,17 @@ def consultaResultado(Clase_consultada, Marca_consultado, Referencia_consultado,
     print(resultados)
 
     if resultados:
-        precio = resultados.get("precio")
-        return "$ "+"{:,}".format(precio*1000)
+        precio = resultados.get("precio")*1000
+        combustible = resultados.get("combustible")
+        peso = resultados.get("peso")
+        potencia = resultados.get("potencia")
+        return dbc.Col([
+            html.H2(f"Precio: ${precio:,.0f}"),
+            html.H2(f"Combustible: {combustible}"),
+            html.H2(f"Peso:{peso}kg"),
+            html.H2(f"Potencia:{potencia}hp"),
+        ],
+            md=12, style={'background-color': '#155F82', 'margin-top': '15px'},
+        ),
     else:
-        return "no se encuentra resultado"
+        return html.H2("No se encuentra resultado")

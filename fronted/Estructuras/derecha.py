@@ -5,10 +5,8 @@ from dash import html,dcc
 derecha = dbc.Container([
     dbc.Row([
         dbc.Col([
-                html.H2("Detalle y precio:"),
-                html.Br(),
-                html.Br(),
-                html.H2(id="ResultadoObtenido"),
+                html.H2("Detalle y precio"),
+                html.Div(id="ResultadoObtenido"),
             ],
             md=12, style={'background-color': '#155F82', 'margin-top': '15px'},
         ),        
