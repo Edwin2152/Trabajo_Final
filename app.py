@@ -2,13 +2,10 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import Dash, html,dcc, callback, Input, Output
 from pymongo.mongo_client import MongoClient
-
+from fronted.fronted import layout
 from backend.base import db, consultaResultado
 
 app= dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-
-from fronted.fronted import layout
-
 app.layout=layout
 
 
