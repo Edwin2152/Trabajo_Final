@@ -21,3 +21,4 @@ layout = dbc.Container([
         dbc.Col(inferior, md=12, style={'background-color': '#155F82','margin-top':'15px'}),
     ])
 ])
+.

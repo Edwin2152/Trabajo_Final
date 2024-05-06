@@ -6,6 +6,7 @@ from fronted.fronted import layout
 from backend.base import db, consultaResultado
 
 app= dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+server=app.server
 app.layout=layout
 
 
