@@ -28,4 +28,3 @@ def consulta(Clase_consultada,Marca_consultado,Referencia_consultado,Modelo_cons
 
 if __name__=='__main__':
     app.run_server(debug=True)
-    if_name 
