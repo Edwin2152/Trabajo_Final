@@ -1,4 +1,6 @@
-pymongo.mongo_client == 4.6.3
-dash
-ash_bootstrap_components
-dash.dependencies
+pymongo == 4.6.3
+dash==2.16.1
+dash-bootstrap-components==1.6.0
+callback==0.0.1
+dcc==0.8.0
+dnspython==2.6.1
